@@ -17,7 +17,21 @@ dataset.head(10)
 dataset.info()
 dataset.describe()
 sns.scatterplot(x='Height', y='Weight', hue='Gender', data=dataset)
+"""
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   Gender  10000 non-null  object 
+ 1   Height  10000 non-null  float64
+ 2   Weight  10000 non-null  float64
+dtypes: float64(2), object(1)
+memory usage: 234.5+ KB
 
+<AxesSubplot:xlabel='Height', ylabel='Weight'>
+image...
+"""
 dataset['Gender'].replace('Female',0, inplace=True)
 dataset['Gender'].replace('Male',1, inplace=True)
 
