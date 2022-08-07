@@ -53,5 +53,6 @@ regressor.fit(x_train, y_train)
 y_pred = regressor.predict(x_test)
 
 print(f'MAE = {mean_absolute_error(y_test,y_pred)}')
-
+#MAE = 3.848802091903812
 print(f'XG Boost Regressor is about {round(regressor.score(x_test,y_test)*100)}% accurate!')
+#XG Boost Regressor is about 89% accurate!
