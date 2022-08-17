@@ -1,3 +1,4 @@
+#import labs we need:
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -8,14 +9,17 @@ from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from math import sqrt
 
+#read datas from dataset:
 dataset = pd.read_csv('https://raw.githubusercontent.com/QueraTeam/college-ml/main/ML_intro/6-%20machine%20learning%20in%20practice/weight_dataset.csv')
 
 dataset['Height']= dataset.Height.apply(lambda val : 2.54*val)
 dataset['Weight']= dataset.Weight.apply(lambda val: 0.45359237*val)
 
+#show datas:
 dataset.head(10)
 dataset.info()
 dataset.describe()
+
 sns.scatterplot(x='Height', y='Weight', hue='Gender', data=dataset)
 """
 <class 'pandas.core.frame.DataFrame'>
@@ -32,9 +36,13 @@ memory usage: 234.5+ KB
 <AxesSubplot:xlabel='Height', ylabel='Weight'>
 image...
 """
+
+#change values of gender:
 dataset['Gender'].replace('Female',0, inplace=True)
 dataset['Gender'].replace('Male',1, inplace=True)
 
+
+#what?!
 x_train,x_test, y_train,y_test = train_test_split(dataset.drop('Weight',axis=1), dataset.Weight, test_size=0.2, random_state=101)
 """
 XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
