@@ -4,6 +4,12 @@ To learn more about how to solve questions in the field of machine learning, we 
 ## Data
 Each row of the problem data is related to a person and its characteristics according to the table below.
 
+| Column Name | Description |
+| ------------- | ------------- |
+| Gender | Gender |
+| Height | is the person's height in inches |
+| Weight | Person's weight in pounds | 
+
 ## Before seeing the code, it is better to know the following things!
 - We have used scikit learn, pandas and seaborn libraries to solve this problem. scikit learn was used for modeling, pandas was used for reading and data manipulation, and seaborn was used for illustration.
 - In this issue, the information of each person, which includes his height, weight and gender, is considered as an example.
