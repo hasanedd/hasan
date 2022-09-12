@@ -18,7 +18,6 @@ dataset['Weight']= dataset.Weight.apply(lambda val: 0.45359237*val)
 dataset.head(10)
 dataset.info()
 dataset.describe()
-
 sns.scatterplot(x='Height', y='Weight', hue='Gender', data=dataset)
 """
 <class 'pandas.core.frame.DataFrame'>
