@@ -34,7 +34,6 @@ memory usage: 234.5+ KB
 <AxesSubplot:xlabel='Height', ylabel='Weight'>
 image...
 """
-
 #change values of gender:
 dataset['Gender'].replace('Female',0, inplace=True)
 dataset['Gender'].replace('Male',1, inplace=True)
